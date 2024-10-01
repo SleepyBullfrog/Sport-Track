@@ -2,4 +2,4 @@ Lancer le commande "php -S localhost:8080" et se connecter à localhost:8080 pou
 L'arborescence, le nom et le contenu des fichiers doivent être absolument respectés tels qu'ils sont lors du téléchargement ou, si vous souhaitez ajouter d'autres sections à ce site web, il sera nécessaire de suivre le format utilisé dans index.html pour l'ajout de pages et vous devrez respecter le modèle MVC 2 suivi.
 
 Pour accéder au tableau de bord, il est nécessaire de créer un compte utilisateur.
-Pour réinitialiser les données, accédez à la base de données et vider celle-ci manuellement ou avec un script ou exécuter le script de création.
+Pour réinitialiser les données, accédez à la base de données et vider celle-ci manuellement ou exécuter le script de création.
