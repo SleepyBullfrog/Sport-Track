@@ -1,0 +1,5 @@
+Lancer le commande "npm start" dans ./sport-track-app et se connecter à localhost:3000 pour accéder à ce site web en local.
+L'arborescence, le nom et le contenu des fichiers doivent être absolument respectés tels qu'ils sont lors du téléchargement ou, si vous souhaitez ajouter d'autres sections à ce site web, il faudra suivre le format suivi à l'aide du module express.
+
+Pour accéder au tableau de bord (appelé page du formulaire de téléversement dans la JSdoc), il est nécessaire de créer un compte utilisateur.
+Pour réinitialiser les données, accédez à la base de données et vider celle-ci manuellement ou avec un script ou exécuter le script de création.

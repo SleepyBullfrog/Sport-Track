@@ -1,0 +1,57 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title SportTrack
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous')
+
+.container
+  header.d-flex.flex-wrap.justify-content-center.py-3.mb-4.border-bottom
+    a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-body-emphasis.text-decoration-none(href='/')
+      span.fs-4 SportTrack
+    ul.nav.nav-pills
+      li.nav-item
+        a.nav-link(href='/') Accueil
+      li.nav-item
+        a.nav-link.active(href='/users' aria-current='page') Inscription
+      li.nav-item
+        a.nav-link(href='/connect') Connexion
+.container
+  form.form-signin.w-75.m-auto(method='post' action='/users')
+    h1.h3.mb-3.fw-normal.text-center Inscription
+    fieldset.border.border-secondary-subtle.rounded.p-2
+      legend Informations personnelles
+      .row.mb-1
+        .form-floating.col
+          input#nom.form-control(name='nom' placeholder='Nom' autofocus='' required='')
+          label(for='nom') Nom
+        .form-floating.col
+          input#prenom.form-control(name='prenom' placeholder='Prénom' required='')
+          label(for='prenom') Pr&eacute;nom
+      .form-floating.mb-1
+        input#birth.form-control(type='date' name='birth' min='1900-01-01' max='<?php echo $today;?>' placeholder='Date de naissance' required='')
+        label(for='birth') Date de naissance
+      select#gender.form-select.mb-1(name='gender' required='')
+        option(selected='selected' disabled='disabled' value='') Genre
+        option(value='Homme') Homme
+        option(value='Femme') Femme
+        option(value='Autre') Autre
+        option(value='Ne souhaite pas partager') Ne souhaite pas partager
+      .row
+        .form-floating.col
+          input#height.form-control(type='number' name='height' min='1' placeholder='Taille' required='')
+          label(for='birth') Taille
+        .form-floating.col
+          input#weight.form-control(type='number' name='weight' min='1' placeholder='Poids' required='')
+          label(for='birth') Poids
+    fieldset.border.border-secondary-subtle.rounded.p-2.mt-1
+      legend Identification
+      .form-floating.mb-1
+        input#email.form-control(type='email' name='email' placeholder='E-Mail' required='')
+        label(for='email') E-Mail
+      .form-floating.mb-1
+        input#password.form-control(type='password' name='passwd' minlength='8' placeholder='Mot de passe' required='')
+        label(for='password') Mot de passe
+      .form-floating.mb-1
+        input#passwd-confirm.form-control(type='password' name='passwd-confirm' minlength='8' placeholder='Confirmer le mot de passe' required='')
+        label(for='passwd-confirm') Confirmer le mot de passe
+    button.btn.btn-primary.w-100.py-2(type='submit') S&apos;inscrire

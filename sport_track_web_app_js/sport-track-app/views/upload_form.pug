@@ -1,0 +1,35 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title SportTrack
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous')
+
+.container
+  header.d-flex.flex-wrap.justify-content-center.py-3.mb-4.border-bottom
+    a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-body-emphasis.text-decoration-none(href='/')
+      span.fs-4 SportTrack
+    ul.nav.nav-pills
+      li.nav-item
+        a.nav-link.active(href='/upload' aria-current='page') Tableau de bord
+      li.nav-item
+        a.nav-link(href='/disconnect') D&eacute;connexion
+main
+  .container
+    h1 Bienvenue, #{title}
+    hr
+    .row
+      .col.text-center
+        form(method='post' action='/upload' enctype='multipart/form-data')
+          .form-control
+            h2.mb-2 Envoyer un fichier
+            input#JSON(type='file' name='JSON' accept='application/JSON' placeholder='Sélectionnez un fichier')
+            p(align='center')
+            if (typeof(resultatTraitement) !== undefined)
+              p(align='center')= resultatTraitement
+          button.btn.btn-primary.py-2(type='submit') Envoyer le fichier
+      .col.text-center
+        h2.mb-2 Activit&eacute;s personnelles
+        p Acc&eacute;der &agrave; la liste de vos activit&eacute;s personelles
+        a.btn.btn-primary.py-2(href='/activities') Voir mes activit&eacute;s
+  br
+  

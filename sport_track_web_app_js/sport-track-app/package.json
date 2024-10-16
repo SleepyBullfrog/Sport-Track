@@ -1,0 +1,23 @@
+{
+  "name": "sport-track-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "formidable": "^3.5.1",
+    "fs": "^0.0.1-security",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "path": "^0.12.7",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.3",
+    "sport-track-db": "file:../sport-track-db"
+  }
+}
